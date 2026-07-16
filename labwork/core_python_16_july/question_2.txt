@@ -1,0 +1,22 @@
+s = input("Enter a string: ")
+upper = lower = digit = special = 0
+freq = {}
+
+for ch in s:
+    if ch.isupper():
+        upper += 1
+    elif ch.islower():
+        lower += 1
+    elif ch.isdigit():
+        digit += 1
+    else:
+        special += 1
+    freq[ch] = freq.get(ch, 0) + 1
+
+most_freq = max(freq, key=freq.get)
+
+print("Uppercase:", upper)
+print("Lowercase:", lower)
+print("Digits:", digit)
+print("Special Characters:", special)
+print("Most Frequent Character:", most_freq)

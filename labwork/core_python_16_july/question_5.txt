@@ -1,0 +1,9 @@
+nums = [int(input("Enter number: ")) for _ in range(20)]
+
+print("Largest:", max(nums))
+print("Second Largest:", sorted(set(nums))[-2])
+print("Smallest:", min(nums))
+print("Without Duplicates:", list(set(nums)))
+print("Even Numbers:", [n for n in nums if n % 2 == 0])
+print("Divisible by 3 & 5:", [n for n in nums if n % 15 == 0])
+print("Reversed:", nums[::-1])
